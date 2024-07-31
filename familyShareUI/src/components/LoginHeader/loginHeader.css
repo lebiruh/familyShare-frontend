@@ -1,0 +1,36 @@
+.login_header {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  /* background-color: blue; */
+}
+
+.login_header_logo {
+  padding-left: 75px;
+  padding-top: 15px;
+  width: 300px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
+
+.family, .share {
+  color: #0A66C2;  
+}
+
+.family {
+  font-family: sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.share {
+  font-family: cursive;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 768px) {
+  .login_header_logo {
+    padding-left: 30px;
+  }
+}
