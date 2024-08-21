@@ -1,13 +1,14 @@
-.login_form_container {
+.confirmation_form_container {
   box-shadow: 0.3em 0.3em 1em rgb(0 0 0 / 10%);
   width: 400px;
   /* min-height: 75%; */
   padding: 20px;
   border-radius: 5px;
   animation: grow 1s ease-in-out;
+  background-color: #ffffff;
 }
 
-.loginForm_container {
+.confirmationForm_container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +16,7 @@
   gap: 10px;
 }
 
-.login_form_header_content h1{
+.confirmation_form_header_content h1 {
   font-size: 2rem;
   line-height: 1.25;
   font-weight: 600;
@@ -24,7 +25,7 @@
   padding-bottom: 4px;
 }
 
-.login_form_header_content p {
+.confirmation_form_header_content p {
   font-size: 1rem;
   line-height: 1.42857;
   font-weight: 400;
@@ -32,11 +33,11 @@
   margin-left: 20px;
 }
 
-.email_input, .password_input {
+.code_input {
   width: 90%;
 }
 
-.email_input input, .password_input input{
+.code_input input {
   height: 3rem;
   width: 100%;
   outline: none;
@@ -50,37 +51,20 @@
   padding: 6px 6px;
 }
 
-.email_input label,
-.password_input label {
+.code_input label {
   font-size: 0.5rem;
   visibility: hidden;
 }
 
-.forgot_password {
+.submit_container {
   width: 90%;
-  /* height: 300px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.forgot_password a {
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #0A66C2; 
-  padding: 10px 10px 10px 10px;
-  border-radius: 25px;
-}
-
-.forgot_password a:hover {
-  background-color: #D0E8FF;
-  text-decoration: underline;
-}
-
-.signin_container {
-  width: 90%;
-}
-
-.signin_btn {
-  width: 100%;
+.submit_btn {
+  width: 50%;
   height: 50px;
   font-size: 1.1rem;
   font-weight: 500;
@@ -91,7 +75,7 @@
   cursor: pointer;
 }
 
-.signin_btn:hover {
+.submit_btn:hover {
   background-color: #004182;
 }
 
@@ -117,11 +101,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .login_form_container {
-      box-shadow: none;
-    }
+  .confirmation_form_container {
+    box-shadow: none;
+  }
 
-  .email_input, .password_input, .forgot_password, .signin_container, .separator {
+  .code_input,
+  .submit_container,
+  .separator {
     width: 90%;
   }
 }
@@ -131,7 +117,8 @@
     padding: 0;
     width: 95%;
   }
-  .loginForm_container {
+
+  .confirmationForm_container {
     /* display: flex;
     flex-direction: column; */
     align-items: flex-start;
@@ -139,11 +126,13 @@
     column-gap: 0;
     row-gap: 10px;
   }
-  .login_form_header_content h1, .login_form_header_content p {
+
+  .confirmation_form_header_content h1,
+  .confirmation_form_header_content p {
     margin-left: 0;
   }
 
-  .signin {
+  .submit {
     width: 90%;
     text-align: center;
   }
@@ -158,4 +147,3 @@
     transform: scale(1);
   }
 }
-

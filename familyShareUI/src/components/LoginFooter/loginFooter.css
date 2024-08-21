@@ -1,0 +1,30 @@
+.footer_container {
+  display: flex;
+  justify-content: center;  
+  padding-top: 10px;
+  background-color: #ffffff;
+}
+
+.footer_container ul {
+  width: 50%;
+  height: 50px;
+  list-style: none;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-around;
+  color: #b3b3b3;  
+}
+
+.footer_container ul li {
+  cursor: pointer;
+}
+
+.footer_container ul li:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+  .footer_container {
+    display: none;
+  }
+}

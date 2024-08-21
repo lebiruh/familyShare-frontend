@@ -1,5 +1,5 @@
-// import { useState } from 'react'
-import Login from './pages/Login/Login'
+import Routing from './Router';
+
 
 import './App.css'
 
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div>
-      <Login />
+      <Routing />
     </div>
   )
 }

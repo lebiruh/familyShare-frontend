@@ -1,8 +1,16 @@
 .login_header {
   height: 75px;
   display: flex;
-  align-items: center;
-  /* background-color: blue; */
+  align-items: center; 
+  width: 100vw; 
+}
+
+.bg_white {
+  background-color: #ffffff;
+}
+
+.bg_gray {
+  background-color: #F3F2F0;
 }
 
 .login_header_logo {
@@ -15,7 +23,7 @@
 }
 
 .family, .share {
-  color: #0A66C2;  
+  color: #0A66C2;
 }
 
 .family {

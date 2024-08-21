@@ -1,4 +1,4 @@
-.signup_container {
+.confirmEmail_container {
   width: 100vw;
   height: 83vh;
   display: flex;
@@ -8,22 +8,21 @@
   background-color: #F3F2F0;
 }
 
-/* .position_setter {
-  background-color: rgb(255, 17, 0); 
-  height: 250px;
-  width: 200px;
-} */
+.confirmEmail_position_setter {
+  height: 100px;
+}
 
 @media screen and (max-width: 900px) {
-  .signup_container {
+  .confirmEmail_container {
     height: 100vh;
   }
 
 }
 
 @media screen and (max-width: 450px) {
-  .signup_container {
+  .confirmEmail_container {
     /* margin-left: 30px; */
+    padding-top: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;

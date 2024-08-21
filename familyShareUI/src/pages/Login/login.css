@@ -1,6 +1,6 @@
 .login_container {
   width: 100vw;
-  height: 90vh;
+  height: 83vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +29,7 @@
   text-decoration: underline;
 }
 
-.position_setter {
+.login_position_setter {
   height: 100px;
 }
 
