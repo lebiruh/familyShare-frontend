@@ -1,0 +1,147 @@
+.timeline_navbar_container {
+  height: 70px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo_input_container {
+  height: 100%;
+  display: flex;
+  align-items: center;  
+  margin-left: 10px;
+  position: relative;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+/* .search_results_container {
+  width: 98vw;
+  height: 93vh;
+  position: absolute;
+  top: 70px;
+  left: -10px;
+  padding-left: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+} */
+
+.input {
+  width: 300px;
+  border: 2px solid white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  background-color: #EDF3F8;
+  margin-left: 10px;
+}
+
+.input input {
+  height: 40px;
+  /* margin-left: 15px; */
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  /* transition: border 0.5s ease; */
+  font-size: 18px;
+  padding: 10px;
+}
+
+.input:focus-within {
+  width: 400px;
+  border: 2px solid #101010;
+  transition: width 0.5s ease, border 0.5s ease;
+}
+
+.welcome {
+  margin-right: 10px;
+  /* width: 500px; */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.welcome span {
+  /* width: 500px; */
+  font-size: 16px;
+}
+
+.timeline_navbar_container_small_screen {
+  height: 70px;
+  /* width: 98%; */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo_input_container_small_screen {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.input_small_screen {
+  width: 275px;
+  border: 2px solid white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  background-color: #EDF3F8;
+  margin-left: 10px;
+}
+
+.input_small_screen input {
+  height: 40px;
+  /* margin-left: 15px; */
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  /* transition: border 0.5s ease; */
+  font-size: 18px;
+  padding: 10px;
+}
+
+.input_small_screen:focus-within {
+  /* width: 400px; */
+  border: 2px solid #101010;
+  transition: border 0.5s ease;
+}
+
+.welcome_small_screen {
+  margin-right: 15px;
+  /* width: 500px; */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.welcome_small_screen span {
+  /* width: 500px; */
+  font-size: 16px;
+}
+
+@media screen and (min-width: 600px) {
+  .timeline_navbar_container_small_screen {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline_navbar_container {
+    display: none;
+  }
+}

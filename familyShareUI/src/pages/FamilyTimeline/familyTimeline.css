@@ -1,0 +1,17 @@
+.family_timeline_outer_container {
+width: 98vw;
+}
+
+.family_timeline_container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #F4F2EE;
+}
+
+.family_timeline {
+  flex: 3;
+  /* background-color: blue; */
+  margin-top: 20px;
+}
+

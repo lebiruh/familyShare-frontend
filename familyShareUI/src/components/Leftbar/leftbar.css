@@ -1,0 +1,110 @@
+.leftbar_container {
+  /* flex: 1; */
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 20px;
+  /* padding: 10px; */
+  height: fit-content;
+  width: 300px;
+  background-color: #ffffff;
+  position: sticky;
+  top: 70px;  
+}
+
+.profile_background_pic {
+  height: 100px;
+  width: 100%;
+  position: relative;
+  /* background-color: blueviolet; */  
+}
+
+.profile_background_pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.profile_pic {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  bottom: -50px;
+  left: 100px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile_pic img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile_name {
+  margin-top: 65px;
+  text-align: center;
+  
+}
+.profile_name p {
+  font-size: 1.1rem;
+  
+}
+
+.number_family_groups {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.groups, .groups_number, .members {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.groups {
+  color: #5E5E5E;
+}
+
+.groups_number {
+  color: #0A66C2;
+}
+
+.groups:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.family_member_lists {
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.members {  
+  display: flex;
+  justify-content: space-between;
+}
+
+.members_title {
+  color: #0A66C2;
+}
+
+.show, .hide {
+  color: #5E5E5E;
+}
+
+.show:hover, .hide:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 736px) {
+  .leftbar_container {
+    display: none;
+  }
+}

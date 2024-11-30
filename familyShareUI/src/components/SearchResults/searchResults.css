@@ -1,0 +1,43 @@
+
+.search_results_container {
+  width: 98vw;
+  height: 93vh;
+  position: absolute;
+  top: 70px;
+  left: -10px;
+  padding-left: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.search_results{
+  width: 500px;
+  margin-left: 75px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: white;
+  border: 1px solid whitesmoke;
+}
+
+.no-query {
+  display: none;
+}
+
+.search_results .user_list {
+  list-style: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.search_results .user_list:hover {
+  background-color: #dfdbdb;
+}
+
+.search_results p {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px;
+}

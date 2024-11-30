@@ -1,0 +1,41 @@
+.rightbar_container {
+  flex: 2;
+  margin-left: 20px;
+  margin-right: 50px;
+  height: 100%;
+  /* background-color: azure; */
+  margin-top: 20px;
+  position: sticky;
+  top: 85px;
+}
+
+
+.rightbar_container ul {
+  height: 25px;
+  list-style: none;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  color: #b3b3b3;
+}
+
+.rightbar_container ul li {
+  cursor: pointer;
+}
+
+.rightbar_container ul li:hover {
+  text-decoration: underline;
+}
+
+.rightbar_copyright {
+  height: 50px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 1008px) {
+  .rightbar_container {
+    display: none;
+  }
+}

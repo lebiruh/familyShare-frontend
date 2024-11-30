@@ -1,0 +1,36 @@
+.delete_icon_container {
+ cursor: pointer;
+ border-radius: 2px;
+}
+
+.delete_icon_container:hover {
+  background-color: #F3F3F3;
+}
+
+.like_and_comment_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: blue; */
+}
+
+.post_comments, .post_likes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.post_comments:hover, .post_likes:hover {
+  background-color: #F3F3F3;
+}
+
+.post_comments span, .post_likes span {
+  margin-left: 10px;
+}

@@ -1,0 +1,139 @@
+.add_member_container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 50px;
+}
+
+.add_member_toolbar {
+  width: 75%;
+  height: 75%;
+  /* margin-top: 50px; */
+  background-color: white;
+  border-radius: 8px;
+}
+
+.add_member_toolbar .menu_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.menu_bar_cross_icon {
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.menu_bar_icon:hover {
+  background-color: #f3f3f3;
+}
+
+.search_input {
+  width: 97%;
+  border: 2px solid white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  /* background-color: #EDF3F8; */
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.search_input input {
+  height: 40px;
+  /* margin-left: 15px; */
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  /* transition: border 0.5s ease; */
+  font-size: 18px;
+  padding: 10px;
+}
+
+.search_input:focus-within {
+  /* width: 400px; */
+  border: 2px solid #101010;
+  /* transition: border 0.5s ease; */
+}
+
+.search_user_results {
+  width: 95%;
+  height: 65%;
+  overflow-y: hidden;
+  /* margin-left: 75px; */
+  /* border-bottom-left-radius: 8px; */
+  /* border-bottom-right-radius: 8px; */
+  /* background-color: blue; */
+  /* border: 1px solid whitesmoke; */
+}
+
+.search_user_results .users_list {
+  list-style: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.search_user_results .users_list:hover {
+  background-color: #dfdbdb;
+}
+
+.search_user_results p {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.addMember_button_container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.addMember_button_active {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 7px;
+  background-color: #0A66C2;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addMember_button_active:hover {
+  background-color: #0f4a84;
+}
+
+.addMember_button_disabled {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 7px;
+  background-color: #E8E8E8;
+  color: #A5A5A5;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: not-allowed;
+}
+
+.addMember_button_disabled:hover {
+  background-color: #E8E8E8;
+}

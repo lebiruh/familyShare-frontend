@@ -32,7 +32,7 @@ const LoginForm = () => {
 
       setAuthData(JSON.parse(localStorage.getItem('familyShareAuthData')));
 
-      navigate("/timeline")
+      navigate("/")
 
     },
     onError: (error) => {
