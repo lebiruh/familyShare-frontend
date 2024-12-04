@@ -2,7 +2,7 @@ import {Box, CircularProgress} from '@mui/material'
 import {
   useQuery,
 } from '@tanstack/react-query'
-import styled from '@emotion/styled'
+// import styled from '@emotion/styled'
 import HomeFamilyData from '../HomeFamilyData/HomeFamilyData'
 import { getUserByEmail } from '../../helpers/user'
 import { getFamilies } from '../../helpers/family'
@@ -10,12 +10,12 @@ import { getFamilies } from '../../helpers/family'
 
 const HomeFamily = ({userEmail}) => {
 
-  const UserBox = styled(Box) ({
-  display: 'flex',
-  alignItems: 'center',
-  gap: '10px',
-  marginBottom: '20px',
-})
+//   const UserBox = styled(Box) ({
+//   display: 'flex',
+//   alignItems: 'center',
+//   gap: '10px',
+//   marginBottom: '20px',
+// })
 
   const { data: user } = useQuery({ queryKey: ["user", userEmail], queryFn: () => getUserByEmail(userEmail) })
 

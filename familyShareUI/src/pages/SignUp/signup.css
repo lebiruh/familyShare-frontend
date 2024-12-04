@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: center;
   background-color: #F3F2F0;
+  /* background-color: blue; */
+  /* overflow-y: hidden; */
 }
 
 /* .position_setter {

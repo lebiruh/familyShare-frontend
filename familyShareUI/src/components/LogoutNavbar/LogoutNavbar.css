@@ -1,0 +1,22 @@
+.navbar_logout_container {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.navbar_logout_profile, .navbar_logout {
+  width: 99%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.navbar_logout_profile:hover, .navbar_logout:hover {
+  background-color: #F3F3F3;
+}

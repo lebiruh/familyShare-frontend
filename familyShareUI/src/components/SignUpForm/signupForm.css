@@ -1,9 +1,12 @@
-.container {
+.signup_form_container {
   width: 500px;
+  height: 100%;
   padding: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
   border-radius: 5px;
   /* box-shadow: 0.3em 0.3em 1em rgb(0 0 0 / 10%); */
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   animation: grow 2s ease-in-out;
 }
 
@@ -42,6 +45,12 @@
   font-weight: 400;
   color: rgba(0, 0, 0, 0.9);
   padding: 6px 6px;
+  margin-top: 0;
+}
+
+.username_input input:focus, .firstname_input input:focus, .lastname_input input:focus, .signup_email_input input:focus,
+.signup_password_input input:focus {
+  outline: 1px solid black;
 }
 
 .username_input label, .firstname_input label, .lastname_input label, .signup_email_input label,
@@ -49,6 +58,9 @@
   font-size: 1rem;
   font-weight: 600;
   color: #404040;
+  padding-top: 5px;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .signup_btn_container {

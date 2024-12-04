@@ -62,11 +62,13 @@
 }
 
 .welcome {
+  position: relative;
   margin-right: 10px;
   /* width: 500px; */
   display: flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
 }
 
 .welcome span {
@@ -122,6 +124,7 @@
 }
 
 .welcome_small_screen {
+  position: relative;
   margin-right: 15px;
   /* width: 500px; */
   display: flex;

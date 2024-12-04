@@ -7,7 +7,7 @@
   left: -10px;
   padding-left: 100px;
   background-color: rgba(0, 0, 0, 0.5);
-
+  z-index: 500;
 }
 
 .search_results{

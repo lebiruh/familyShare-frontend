@@ -88,7 +88,7 @@ const SignUpForm = () => {
 
 
   return (
-     <section className="container">
+     <section className="signup_form_container">
       <div className="signup_form_header_content">
         <h1>Sign up</h1>
       </div>
@@ -128,7 +128,7 @@ const SignUpForm = () => {
           <button className="signup_btn">Agree & Join</button>
         </div>
         <div className="signin">
-          Already on familyShare?<span><Link to="/">Sign in</Link></span>
+          Already on familyShare?<span><Link to="/login">Sign in</Link></span>
         </div>
       </form>
     </section>
