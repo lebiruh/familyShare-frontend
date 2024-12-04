@@ -45,6 +45,8 @@ const AddMember = ({setIsAddMemberOpen, familyGroupId}) => {
 
   const handleOnChange = (e) => {
 
+    e.stopPropagation();
+
     setSearchUser(e.target.value);
 
     !e.target.value ? setInput(false) : setInput(true);
@@ -58,6 +60,7 @@ const AddMember = ({setIsAddMemberOpen, familyGroupId}) => {
 
   const handleAddMemberClick = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     addFamilyMemberMutation.mutate({familyGroupId, memberToBeAdded});
     setInput(false);
     setIsAddMemberOpen(false);
@@ -66,14 +69,19 @@ const AddMember = ({setIsAddMemberOpen, familyGroupId}) => {
 
   const handleAddMemberCloseButtonClick = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     setIsAddMemberOpen(false);
     document.body.style.overflow = 'auto';
+  }
+
+  const stopPropagation = (event) => {
+    event.stopPropagation();
   }
 
   
 
   return (
-    <div className='add_member_container'>
+    <div className='add_member_container' onClick={stopPropagation}>
       <form className="add_member_toolbar" onSubmit={handleAddMemberClick}>
         <div className="menu_bar">
           <span>Add member</span>

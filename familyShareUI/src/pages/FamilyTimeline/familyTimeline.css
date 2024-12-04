@@ -1,5 +1,6 @@
 .family_timeline_outer_container {
-width: 98vw;
+  /* position: relative; */
+  width: 98vw;
 }
 
 .family_timeline_container {

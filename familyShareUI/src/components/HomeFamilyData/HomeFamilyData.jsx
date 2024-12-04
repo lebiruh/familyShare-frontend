@@ -12,7 +12,7 @@ const HomeFamilyData = ({data}) => {
     <div className='card'>    
       <Link to={`/family_group/${data.Id}`}>      
         <div style={{display: "flex", flexDirection:"row", alignItems: "center", gap:"10px"}}>
-          <Avatar />
+          <Avatar className='home_family_avatar'/>
             <Typography>
               {data.familyName}
             </Typography>

@@ -6,20 +6,30 @@ import { useAuth } from '../../helpers/useAuth';
 import { AuthProvider } from '../../Context/AuthContext/AuthContext';
 import { IoMdSearch } from "react-icons/io";
 import SearchResults from '../SearchResults/SearchResults';
+import LeftbarSmallScreen from '../LeftbarSmallScreen/LeftbarSmallScreen';
+import LeftbarGroupSmallScreen from '../LeftbarGroupSmallScreen/LeftbarGroupSmallScreen';
 import { useQuery } from '@tanstack/react-query';
 import { fetchUsers } from '../../helpers/search';
 import { useNavigate } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 const TimelineNavbar = () => {
 
   const [userData, setUserData] = useState({});
   const [query, setQuery] = useState('');
+  const [isDisplayOpen, setIsDisplayOpen] = useState(false);
+
 
   const {authData} = useAuth(AuthProvider);
 
-  // console.log("User data: " + userData?.firstName + " " + userData?.lastName[0]);
-
   const navigate = useNavigate();
+
+  const {familyGroupId} = useParams();
+
+  console.log("userParam on timlinenavbar is: " + familyGroupId);
+
+  console.log("isDisplayOpen: " + isDisplayOpen);
+
 
   useEffect(() => {
 
@@ -32,6 +42,15 @@ const TimelineNavbar = () => {
     enabled: !!query,
     staleTime: 1000 * 60 * 5
   })
+
+  const handleLogoClick = () => {
+
+    setIsDisplayOpen(true);
+
+    document.body.style.overflow = 'hidden'
+
+    // navigate('/')
+  }
 
   return (
     <>
@@ -52,7 +71,7 @@ const TimelineNavbar = () => {
       </div>
       <div className="timeline_navbar_container_small_screen">
         <div className="logo_input_container_small_screen">
-          <div className='logo' onClick={() => navigate('/')}>
+          <div className='logo' onClick={handleLogoClick}>
             <span className="family">f</span><span className="share">S</span>
           </div>
           <div className="input_small_screen">
@@ -64,6 +83,10 @@ const TimelineNavbar = () => {
           <span><Avatar >{authData?.firstName[0].toUpperCase()}</Avatar></span>
         </div>
       </div>
+      {isDisplayOpen && !familyGroupId && <LeftbarSmallScreen isDisplayOpen={isDisplayOpen} setIsDisplayOpen={setIsDisplayOpen} />}
+      {
+        isDisplayOpen && familyGroupId && <LeftbarGroupSmallScreen isDisplayOpen={isDisplayOpen} setIsDisplayOpen={setIsDisplayOpen}/>
+      }
     </>
   )
 }

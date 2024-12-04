@@ -9,6 +9,7 @@
   background-color: #ffffff;
   position: sticky;
   top: 70px;  
+  z-index: 10;
 }
 
 .profile_background_pic {
@@ -101,6 +102,23 @@
 
 .show:hover, .hide:hover {
   cursor: pointer;
+}
+
+.leftbar_create_group_container {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.leftbar_create_group {
+  color: #0A66C2;
+  cursor: pointer;
+}
+
+.leftbar_create_group:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 736px) {

@@ -61,3 +61,25 @@ export const addFamilyMember = async (familyId, userId) => {
 
 };
 
+export const createFamily = async (familyName, userId) => {
+
+  console.log("familyName on create family is: " + familyName);
+  console.log("userId on create family is: " + userId);
+
+  try {
+    const response = await axios.post(`/api/createFamily/${userId}`, {familyName}, {  withCredentials: true});
+
+    const family = response.data;
+
+    console.log("Family Response is: ", response);
+
+    console.log("Family data is: ", family);
+
+    return response;
+
+  } catch (error) {
+    console.log(error);
+  }
+
+};
+

@@ -13,13 +13,17 @@ import { getFamilies } from "../../helpers/family";
 import { useNavigate } from "react-router-dom";
 // import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi";
 import { useParams } from "react-router-dom";
+import AddGroup from "../AddGroup/AddGroup";
 
 
 
 const Leftbar = () => {
 
   const [userData, setUserData] =useState(null)
+  const [isAddGroupOpen, setIsAddGroupOpen] = useState(false)
+
   // const [isOpen, setIsOpen] = useState(false)
+
 
   // const {authData} = useAuth(AuthProvider);
   const {familyGroupId} = useParams();
@@ -57,6 +61,11 @@ const Leftbar = () => {
     navigate('/family_group')
   }
 
+  const handleAddGroupClick = () => {
+  setIsAddGroupOpen(true)
+  document.body.style.overflow = 'hidden'
+  } 
+
 
 
   return (
@@ -79,24 +88,12 @@ const Leftbar = () => {
           }
         </span>
       </div>
-      {/* <div className="family_member_lists">
-        <div className="members">
-          <span className="members_title">Members</span>
-          <span className="members_show">
-            {
-              isOpen ? <BiSolidUpArrow className="show" onClick={() => setIsOpen(false)}/> : <BiSolidDownArrow onClick={() => setIsOpen(true)} className="hide"/>
-            }
-          </span>
-        </div>
-        {
-          isOpen && <ul>
-            {
-              groups?.data?.map((group, idx) => <li key={idx}>{group?.familyName}</li>)
-            }
-          </ul>
-        }
-        
-      </div> */}
+      <div className="leftbar_create_group_container">
+        <span className="leftbar_create_group" onClick={handleAddGroupClick}>Create group</span>
+      </div>
+      {
+        isAddGroupOpen && <AddGroup setIsAddGroupOpen={setIsAddGroupOpen} userId={userId}/>
+      }    
     </div>
   )
 }
