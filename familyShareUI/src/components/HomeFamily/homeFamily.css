@@ -1,0 +1,28 @@
+.homePage_welcome_container {
+  width: 100%;
+    /* min-height: 75%; */
+  padding: 5px;
+  font-size: 1rem;
+  padding-top: 50px;
+  /* background-color: blue; */
+}
+
+.homePage_welcome, .homePage_start_sharing {
+  width: 100%;
+  text-align: center;
+  line-height: 1.5; 
+}
+
+.homePage_welcome {
+  color:#0A66C2;
+}
+
+.homePage_start_sharing span {
+  color: #0A66C2;
+  font-weight: 500;
+  cursor: pointer;  
+}
+
+.homePage_start_sharing span:hover {
+  text-decoration: underline;
+}

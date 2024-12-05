@@ -2,7 +2,7 @@ import { ImCross } from "react-icons/im"
 import "./addGroup.css"
 import { useState } from "react";
 import {createFamily} from '../../helpers/family';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 
 const AddGroup = ({setIsAddGroupOpen, userId}) => {

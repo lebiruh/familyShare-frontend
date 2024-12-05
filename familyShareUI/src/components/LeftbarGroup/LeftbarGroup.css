@@ -9,6 +9,8 @@
   background-color: #ffffff;
   position: sticky;
   top: 70px;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .group_profile_background_pic {

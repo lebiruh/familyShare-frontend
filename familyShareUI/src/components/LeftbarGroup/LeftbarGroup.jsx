@@ -47,7 +47,7 @@ const LeftbarGroup = () => {
 
   } 
 
-  const displayFamilyName = displayName(familyGroup[0].familyName);
+  const displayFamilyName = displayName(familyGroup?.[0]?.familyName || '');
 
   const { data: members} = useQuery({ queryKey: ["familyMembers", familyGroupId], queryFn: () => getFamilyMembers(familyGroupId)})
 

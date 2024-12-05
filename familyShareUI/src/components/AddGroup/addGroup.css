@@ -70,3 +70,10 @@
 .create_group_input input:focus {
   outline: 2px solid black;
 }
+
+@media screen and (max-width: 768px) {
+  .add_group_form {
+    width: 70%;
+    height: 50%;
+  }
+}

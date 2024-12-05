@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = import.meta.env.VITE_BASE_URL;
+// const baseURL = import.meta.env.VITE_BASE_URL;
 
 export const getFamilies = async (userId) => {
 
@@ -9,7 +9,7 @@ export const getFamilies = async (userId) => {
   const token = userData?.token
 
   try {
-    const response = await axios.get(`${baseURL}/api/getFamily/${userId}`, {  headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.get(`/api/getFamily/${userId}`, {  headers: {'Authorization': `Bearer ${token}`}});
 
     return response;
 
@@ -27,7 +27,7 @@ export const getFamilyMembers = async (familyId) => {
   const token = userData?.token
 
   try {
-    const response = await axios.get(`${baseURL}/api/getFamilyMembers/${familyId}`, {  headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.get(`/api/getFamilyMembers/${familyId}`, {  headers: {'Authorization': `Bearer ${token}`}});
 
     return response;
 

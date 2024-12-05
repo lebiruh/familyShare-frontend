@@ -1,7 +1,7 @@
 import axios from "axios"
 // import {axiosInstance} from "../Api/axios"
 
-const baseURL = import.meta.env.VITE_BASE_URL;
+// const baseURL = import.meta.env.VITE_BASE_URL;
 
 export const login = async (loginData) => {
 
@@ -9,7 +9,7 @@ export const login = async (loginData) => {
 
   try {
 
-    const response = await axios.post(`${baseURL}/api/auth/login`, loginData);
+    const response = await axios.post(`/api/auth/login`, loginData);
 
     return response.data;
 

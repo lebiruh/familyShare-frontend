@@ -1,7 +1,7 @@
 import axios from "axios"
 // import {axiosInstance} from "../Api/axios"
 
-const baseURL = import.meta.env.VITE_BASE_URL;
+// const baseURL = import.meta.env.VITE_BASE_URL;
 
 export const getUserByEmail = async (userEmail) => {
 
@@ -10,7 +10,7 @@ export const getUserByEmail = async (userEmail) => {
   const token = userData?.token
 
   try {
-    const response = await axios.get(`${baseURL}/api/users/find/${userEmail}`, { headers: {'Authorization': `Bearer ${token}`}})
+    const response = await axios.get(`/api/users/find/${userEmail}`, { headers: {'Authorization': `Bearer ${token}`}})
 
     console.log("The user is:", response);
 
