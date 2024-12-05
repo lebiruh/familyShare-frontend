@@ -37,7 +37,7 @@ const Leftbar = () => {
   }
 
   const handleAddGroupClick = () => {
-  setIsAddGroupOpen(true)
+  setIsAddGroupOpen(true);
   document.body.style.overflow = 'hidden'
   } 
 

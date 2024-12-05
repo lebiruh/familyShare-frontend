@@ -5,6 +5,7 @@
   font-size: 1rem;
   padding-top: 50px;
   /* background-color: blue; */
+  z-index: 1;
 }
 
 .homePage_welcome, .homePage_start_sharing {
