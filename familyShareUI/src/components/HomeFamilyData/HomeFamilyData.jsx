@@ -6,9 +6,7 @@ import "./homeFamilyData.css"
 
 const HomeFamilyData = ({data}) => {
 
-  console.log("Data passed to HomeFamilyData component is: ", data);
   return (
-    // <Card sx={{marginBottom: 2}}>  
     <div className='card'>    
       <Link to={`/family_group/${data.Id}`}>      
         <div style={{display: "flex", flexDirection:"row", alignItems: "center", gap:"10px"}}>
@@ -19,7 +17,6 @@ const HomeFamilyData = ({data}) => {
         </div>      
       </Link>
     </div>
-    // </Card>
   )
 }
 

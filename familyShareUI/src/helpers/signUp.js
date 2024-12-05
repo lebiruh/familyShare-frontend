@@ -5,19 +5,13 @@ import axios from "axios"
 
 export const signUp = async (signUpData) => {
 
-  // console.log("login data is: ", signUpData);
-
   try {
 
     const response = await axios.post(`/api/confirm/email`, signUpData);
 
-    // console.log("Response from API is: ", response.data);
-
     return response.data;
 
   } catch (error) {
-    
-    console.log("Caught error is: ", error);
 
     return error;
 
@@ -28,19 +22,13 @@ export const signUp = async (signUpData) => {
 
 export const register = async (registrationData) => {
 
-  // console.log("login data is: ", signUpData);
-
   try {
 
     const response = await axios.post(`/api/auth/register`, registrationData);
 
-    console.log("Registration data from API is: ", response.data);
-
     return response.data;
 
   } catch (error) {
-    
-    console.log("Caught error is: ", error);
 
     return error;
 

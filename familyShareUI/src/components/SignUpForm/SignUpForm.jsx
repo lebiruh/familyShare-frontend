@@ -30,9 +30,6 @@ const SignUpForm = () => {
       setEmailError(false);
       setPasswordError(false);
 
-      // console.log("signUp success: ", data.response.status);
-      console.log("signUp success data: ", data);
-
       if (data?.response?.status === 409) {
         setErrorText(data.response.data);
       } else {
@@ -49,12 +46,6 @@ const SignUpForm = () => {
       setEmailError(false);
       setPasswordError(false);
 
-      // if (err.response.status === 409) {
-      //   setError(err.response);
-      // }else {
-        setServerError(true);
-      // }  
-      console.log("signUp failed: " + err);
     }
   })
 

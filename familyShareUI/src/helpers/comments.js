@@ -29,11 +29,6 @@ export const addComment = async (newComment) => {
 
   const postId = newComment.postId;
 
-  console.log("post Id is: ", postId);
-
-
-  console.log("comment Data is: ", newComment);
-
   const userData = JSON.parse(localStorage.getItem('familyShareAuthData'))
 
   const token = userData?.token
@@ -43,10 +38,6 @@ export const addComment = async (newComment) => {
     const response = await axios.post(`/api/comments/${postId}`, newComment, { headers: {'Authorization': `Bearer ${token}`}});
 
     const posts = response.data;
-
-    console.log("Comment Response data: ", response);
-
-    console.log("Get comment: ", posts);
 
     return posts;
 

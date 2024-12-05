@@ -14,8 +14,6 @@ export const getLikes = async (postId) => {
 
     const likes = response.data;
 
-    console.log("get likes: " + JSON.stringify(likes));
-
     return likes;
 
   } catch (error) {
@@ -34,8 +32,6 @@ export const addLike = async (postId, userId) => {
 
     const likes = response.data;
 
-    console.log("likes: " + likes);
-
     return likes;
 
   } catch (error) {
@@ -49,8 +45,6 @@ export const removeLike = async (postId, userId) => {
   const userData = JSON.parse(localStorage.getItem('familyShareAuthData'))
 
   const token = userData?.token
-
-  console.log(`This is the remove like mutation. Post ${postId} is disliked by ${userId}`);
 
   try {
     const response = await axios.post(`/api/removelike/${postId}`, {userId}, { headers: {'Authorization': `Bearer ${token}`}});

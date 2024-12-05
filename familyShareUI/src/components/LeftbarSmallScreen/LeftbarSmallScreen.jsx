@@ -8,11 +8,8 @@ import "./leftbarSmallScreen.css"
 import {
   useQuery,
 } from '@tanstack/react-query';
-import { getUserByEmail } from "../../helpers/user";
 import { getFamilies } from "../../helpers/family";
 import { useNavigate } from "react-router-dom";
-// import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi";
-import { useParams } from "react-router-dom";
 import AddGroup from "../AddGroup/AddGroup";
 
 
@@ -20,13 +17,7 @@ import AddGroup from "../AddGroup/AddGroup";
 const LeftbarSmallScreen = ({isDisplayOpen, setIsDisplayOpen}) => {
 
   const [userData, setUserData] =useState(null)
-  // const [isDisplayOpen, setIsDisplayOpen] = useState(false);
-   const [isClicked, setIsClicked] = useState(false);
   const [isAddGroupOpen, setIsAddGroupOpen] = useState(false)
-
-
-  // const {authData} = useAuth(AuthProvider);
-  const {familyGroupId} = useParams();
 
   const navigate = useNavigate()
 
@@ -37,22 +28,8 @@ const LeftbarSmallScreen = ({isDisplayOpen, setIsDisplayOpen}) => {
     }
   }, []);
 
-  const userEmail = userData?.email
-
-  // const userEmail = JSON.parse(localStorage.getItem('familyShareAuth'))?.email
-  console.log("userParam on leftbar is: " + familyGroupId);
-
-  console.log("userEmail: " + userEmail);
-
-
-  const { data: user } = useQuery({ queryKey: ["user", userEmail], queryFn: () => getUserByEmail(userEmail) })
-
-  console.log("userData for family frontend is: ", user);
 
   const userId = userData?.id;
-
-  console.log("userId: " + userId);
-
   
   const { data: groups} = useQuery({ queryKey: ["families", userId], queryFn: () => getFamilies(userId), enabled: !!userId })
 
@@ -105,24 +82,6 @@ const LeftbarSmallScreen = ({isDisplayOpen, setIsDisplayOpen}) => {
         {
           isAddGroupOpen && <AddGroup setIsAddGroupOpen={setIsAddGroupOpen} />
         } 
-        {/* <div className="family_member_lists">
-          <div className="members">
-            <span className="members_title">Members</span>
-            <span className="members_show">
-              {
-                isOpen ? <BiSolidUpArrow className="show" onClick={() => setIsOpen(false)}/> : <BiSolidDownArrow onClick={() => setIsOpen(true)} className="hide"/>
-              }
-            </span>
-          </div>
-          {
-            isOpen && <ul>
-              {
-                groups?.data?.map((group, idx) => <li key={idx}>{group?.familyName}</li>)
-              }
-            </ul>
-          }
-          
-        </div> */}
       </div>
     </div>
   )

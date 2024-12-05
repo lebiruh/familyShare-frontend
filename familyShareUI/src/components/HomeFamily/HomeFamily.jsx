@@ -15,24 +15,11 @@ const HomeFamily = ({userEmail}) => {
 
   const [isAddGroupOpen, setIsAddGroupOpen] = useState(false)
 
-//   const UserBox = styled(Box) ({
-//   display: 'flex',
-//   alignItems: 'center',
-//   gap: '10px',
-//   marginBottom: '20px',
-// })
-
   const { data: user } = useQuery({ queryKey: ["user", userEmail], queryFn: () => getUserByEmail(userEmail) })
-
-  console.log("userData for family frontend is: ", user);
 
   const userId = user?.data[0]?.id;
 
-  console.log("The user ID is: ", userId);
-
   const familiesQuery = useQuery({ queryKey: ["families", userId], queryFn: () => getFamilies(userId), enabled: !!userId })
-
-  console.log("data is: ", familiesQuery);
 
 
   const handleAddGroupClick = () => {

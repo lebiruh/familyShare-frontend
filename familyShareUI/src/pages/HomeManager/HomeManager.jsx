@@ -15,15 +15,9 @@ const HomeManager = () => {
 
   const {authData, isLoading} = useAuth(AuthProvider);
 
-  console.log("User data: ", authData);
-
-  // const userEmail = authData.email;
-
   const userId = authData?.id;
 
   const {data: families} = useQuery({ queryKey: ["families", userId], queryFn: () => getFamilies(userId), enabled: !!userId })
-
-  console.log("Families is: ", families);
 
   const familyGroupId = families?.data[0]?.id;
 

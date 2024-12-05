@@ -1,5 +1,4 @@
 
-// import { useContext } from "react";
 import { useEffect, useState } from "react";
 import {AuthProvider} from "../../Context/AuthContext/AuthContext"
 import { useAuth } from "../../helpers/useAuth";
@@ -13,7 +12,6 @@ import "./timeline.css"
 import { CircularProgress, Stack, TextField } from "@mui/material";
 import { Image } from '@mui/icons-material'
 import {
-  // useQuery,
   useMutation,
   useQuery,
   useQueryClient,
@@ -51,11 +49,6 @@ const Timeline = () => {
     setUserData(authData);
     
   }, [authData]);
-  
-  // const [postData, setPostData] = useState({userId: authData?.id, content: '', familyId: familyGroupId})
-
-
-  // const baseURL = import.meta.env.VITE_BASE_URL;
 
 
   const upload = async () => {
@@ -63,7 +56,6 @@ const Timeline = () => {
       const formData = new FormData();
       formData.append("image", file);
       const res = await axios.post(`/api/upload`, formData);
-      console.log("Upload data: " + res.data);
       return res.data;
     } catch (err) {
       console.log(err);
@@ -95,8 +87,8 @@ const Timeline = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // console.log("post");
     let imgUrl = "";
+    if(postData.content === '' && !file) return;
     if(file) imgUrl = await upload();
     addPostMutation.mutate({...postData, image: imgUrl});
     setPostData({userId: authData?.id, content: '', familyId: familyGroupId})

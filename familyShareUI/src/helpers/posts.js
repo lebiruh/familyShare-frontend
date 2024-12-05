@@ -26,8 +26,6 @@ export const addPost = async (postData) => {
 
 export const getPosts = async (familyId) => {
 
-  // console.log("family Id is: ", familyId);
-
   const userData = JSON.parse(localStorage.getItem('familyShareAuthData'))
 
   const token = userData?.token
@@ -36,10 +34,6 @@ export const getPosts = async (familyId) => {
     const response = await axios.get(`/api/posts/${familyId}`, { headers: {'Authorization': `Bearer ${token}`}});
 
     const posts = response.data;
-
-    // console.log("Post Response data: ", response);
-
-    // console.log("Get data: ", posts);
 
     return posts;
 
@@ -51,8 +45,6 @@ export const getPosts = async (familyId) => {
 
 export const deletePost = async (postId) => {
 
-  console.log("family Id is: ", postId);
-
   const userData = JSON.parse(localStorage.getItem('familyShareAuthData'))
 
   const token = userData?.token
@@ -61,10 +53,6 @@ export const deletePost = async (postId) => {
     const response = await axios.delete(`/api/deletePost/${postId}`, { headers: {'Authorization': `Bearer ${token}`}});
 
     const posts = response.data;
-
-    console.log("Post Response data: ", response);
-
-    console.log("Get data: ", posts);
 
     return posts;
 

@@ -33,9 +33,6 @@ const AddMember = ({setIsAddMemberOpen, familyGroupId}) => {
         }
       },
       onError: (error) => {
-        // if (error.re)
-        console.log("Error is: ", error);
-        // alert(error);
         queryClient.invalidateQueries({queryKey: ["familyMembers", familyGroupId]})
       }
     })

@@ -45,11 +45,7 @@ const Comments = ({ userId, postId }) => {
 
   const commentsQuery = useQuery({ queryKey: ['comments', postId], queryFn: () => getComments(postId), enabled: !!postId})
 
-  console.log("comments query: ", commentsQuery);
-
   const comments = commentsQuery.data;
-
-  console.log("comments are: ", comments);
 
   const handleChange = (e) => {
     setNewComment(prev=> ({...prev, [e.target.name]: e.target.value}) );

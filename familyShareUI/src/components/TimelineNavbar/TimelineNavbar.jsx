@@ -28,11 +28,6 @@ const TimelineNavbar = () => {
 
   const {familyGroupId} = useParams();
 
-  console.log("userParam on timlinenavbar is: " + familyGroupId);
-
-  console.log("isDisplayOpen: " + isDisplayOpen);
-
-
   useEffect(() => {
 
     setUserData(authData);

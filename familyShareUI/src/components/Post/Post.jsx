@@ -17,8 +17,6 @@ import "./post.css";
 const Post = ({data, userId, handleDelete}) => {
 
   const [commentsOpen, setCommentsOpen] = useState(false)
-  // const [deleteOpen, setDeleteOpen] = useState(false)
-  // const [disliked, setDisliked] = useState(false)
 
   const postBy = data?.firstName 
 
@@ -26,17 +24,11 @@ const Post = ({data, userId, handleDelete}) => {
 
   const posterId = data?.userId;
 
-  // const familyId = data?.familyId
-
   const likesQuery = useQuery({ queryKey: ['likes', postId], queryFn: () => getLikes(postId), enabled: !!postId})
 
   const numberOfLikesCount = likesQuery?.data?.length;
 
-  // console.log("Number of likes on post: ", numberOfLikesCount);
-
   const likeUserIds = likesQuery?.data?.map(data => data.userId);
-
-  // const likeUserIds = [ 2, 3]
 
   const queryClient = useQueryClient();
 
@@ -58,17 +50,13 @@ const Post = ({data, userId, handleDelete}) => {
 
 
   const handleLike = () => {
-    // console.log("PostId: " + " " + postId + "is liked by " + userId);
-    // // setDisliked(true);
     addLikeMutation.mutate({postId, userId});
-    // console.log("HandleLike PostId: " + " " + postId + " " + disliked);
   }
 
   const handleDislike = () => {
-    // setDisliked(true);
-    // console.log("PostId: " + " " + postId + "is disliked by " + userId);
+
     removeLikeMutation.mutate({postId, userId});
-    // console.log("Handle Dislike PostId: " + " " + postId + + " " + disliked);
+
   }
 
 
@@ -139,16 +127,6 @@ const Post = ({data, userId, handleDelete}) => {
               </div>
             }
                     
-            {/* </IconButton> */}
-            {/* <span>
-              {numberOfLikesCount === 0 || numberOfLikesCount === undefined ?
-                "like" : 
-                numberOfLikesCount === 1 ?
-                `${numberOfLikesCount} like` :
-                `${numberOfLikesCount} likes`
-              }
-            </span>
-          </div> */}
           <div className='post_comments' onClick={() => setCommentsOpen(!commentsOpen)}>
             {/* <IconButton sx={{ ml: 2}} aria-label="comments" onClick={() => setCommentsOpen(!commentsOpen)}> */}
               <FaRegCommentAlt />          

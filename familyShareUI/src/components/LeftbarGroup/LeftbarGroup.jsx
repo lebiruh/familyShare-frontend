@@ -9,7 +9,6 @@ import {
 import { getFamilies, getFamilyMembers } from "../../helpers/family";
 import { useNavigate } from "react-router-dom";
 import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi";
-// import { IoMdAdd } from "react-icons/io";
 import { MdAdd } from "react-icons/md";
 import { useParams } from "react-router-dom";
 import AddMember from "../AddMember/AddMember";
@@ -25,8 +24,6 @@ const LeftbarGroup = () => {
   const {familyGroupId} = useParams();
 
   const navigate = useNavigate()
-
-  // const userEmail = userData?.email
 
   const userId = userData?.id;
   

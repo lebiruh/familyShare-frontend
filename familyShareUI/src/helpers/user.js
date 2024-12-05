@@ -1,7 +1,4 @@
 import axios from "axios"
-// import {axiosInstance} from "../Api/axios"
-
-// const baseURL = import.meta.env.VITE_BASE_URL;
 
 export const getUserByEmail = async (userEmail) => {
 
@@ -11,8 +8,6 @@ export const getUserByEmail = async (userEmail) => {
 
   try {
     const response = await axios.get(`/api/users/find/${userEmail}`, { headers: {'Authorization': `Bearer ${token}`}})
-
-    console.log("The user is:", response);
 
     return response;
 
@@ -36,7 +31,7 @@ export const getUserById = async (userId) => {
 
 
   } catch (error) {
-    // console.log(error.response.data);
+
     return error;
   }
 };

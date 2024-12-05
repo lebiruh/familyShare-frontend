@@ -24,9 +24,7 @@ const AddGroup = ({setIsAddGroupOpen, userId}) => {
         }
       },
       onError: (error) => {
-        // if (error.re)
-        console.log("Error is: ", error);
-        // alert(error);
+
         queryClient.invalidateQueries({queryKey: ["families", userId]})
       }
     })
@@ -72,14 +70,6 @@ const AddGroup = ({setIsAddGroupOpen, userId}) => {
           <label htmlFor="add_group_name">Group name</label>
           <input id="add_group_name" type="text" placeholder="Type your group name here" value={groupName} onChange={handleOnChange}/>
         </div>
-        {/* <hr /> */}
-        {/* <div className='search_user_results'>
-          {
-            isLoading ? <p>Loading...</p> : (
-              results.length === 0 && input === true ? <p>No users found</p> : <ul>{results.map((user) => <li key={user.id} className='users_list' onClick={() => handleUserListClick(user)}><span>{user.firstName} </span><span>{user.lastName}</span></li>)}</ul> 
-            )
-          }
-        </div> */}
         <div className='addMember_button_container'>
           <button type='submit' disabled={!input} className={ groupName ? 'addMember_button_active' : 'addMember_button_disabled'}>Create</button>
         </div>

@@ -39,7 +39,6 @@ const LoginForm = () => {
       setEmailError(false);
       setPasswordError(false);
       setServerError(true);
-      console.log("Login failed: " + error);
     }
   })
 
