@@ -1,15 +1,26 @@
 import { ImCross } from "react-icons/im"
 import "./addGroup.css"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {createFamily} from '../../helpers/family';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 
-const AddGroup = ({setIsAddGroupOpen, userId}) => {
+const AddGroup = ({setIsAddGroupOpen}) => {
 
   const [groupName, setGroupName] = useState("");
   // const [isDisabled, setIsDisabled] = useState(false);
   const [input, setInput] = useState(false); 
+
+  const [userData, setUserData] =useState(null)
+
+  useEffect(() => {
+    const storedData = localStorage.getItem('familyShareAuthData');
+    if (storedData) {
+      setUserData(JSON.parse(storedData));
+    }
+  }, []);
+
+  const userId = userData?.id;
 
   const queryClient = useQueryClient();
 

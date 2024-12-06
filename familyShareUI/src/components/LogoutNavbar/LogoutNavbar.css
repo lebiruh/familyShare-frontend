@@ -6,7 +6,7 @@
   flex-direction: column;
   width: 150px;
   align-items: center;
-  background-color: white;
+  background-color: rgba(221, 218, 218, 0.7);
   border-radius: 6px;
   padding: 5px;
 }

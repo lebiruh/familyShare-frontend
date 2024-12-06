@@ -67,7 +67,7 @@ const Leftbar = () => {
         <span className="leftbar_create_group" onClick={handleAddGroupClick}>Create group</span>
       </div>
       {
-        isAddGroupOpen && <AddGroup setIsAddGroupOpen={setIsAddGroupOpen} userId={userId}/>
+        isAddGroupOpen && <AddGroup setIsAddGroupOpen={setIsAddGroupOpen} />
       }    
     </div>
   )

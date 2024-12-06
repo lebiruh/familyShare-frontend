@@ -129,7 +129,7 @@
 @media screen and (max-width: 450px) {
   .container {
     padding: 0;
-    width: 95%;
+    width: 90%;
   }
   .loginForm_container {
     /* display: flex;

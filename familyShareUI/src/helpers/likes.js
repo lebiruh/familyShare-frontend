@@ -10,7 +10,7 @@ export const getLikes = async (postId) => {
   const token = userData?.token
 
   try {
-    const response = await axios.get(`${baseURL}/api/getlikes/${postId}`, { headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.get(`/api/getlikes/${postId}`, { headers: {'Authorization': `Bearer ${token}`}});
 
     const likes = response.data;
 
@@ -28,7 +28,7 @@ export const addLike = async (postId, userId) => {
   const token = userData?.token
 
   try {
-    const response = await axios.post(`${baseURL}/api/addlike/${postId}`, {userId}, { headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.post(`/api/addlike/${postId}`, {userId}, { headers: {'Authorization': `Bearer ${token}`}});
 
     const likes = response.data;
 
@@ -47,7 +47,7 @@ export const removeLike = async (postId, userId) => {
   const token = userData?.token
 
   try {
-    const response = await axios.post(`${baseURL}/api/removelike/${postId}`, {userId}, { headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.post(`/api/removelike/${postId}`, {userId}, { headers: {'Authorization': `Bearer ${token}`}});
 
 
     const likes = response.data;

@@ -144,9 +144,9 @@
 }
 
 @media screen and (max-width: 450px) {
-  .container {
+  .signup_form_container {
     padding: 0;
-    width: 95%;
+    width: 90%;
   }
 
   .signupForm_container {
@@ -160,6 +160,10 @@
 
   .signup_form_header_content h1 {
     margin-left: 20px;
+  }
+
+  .separator {
+    margin-bottom: 30px;
   }
 }
 

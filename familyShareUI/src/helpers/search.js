@@ -14,7 +14,7 @@ export const fetchUsers = async (query) => {
 
    try {
 
-    const response = await axios.get(`${baseURL}/api/search?q=${query}`, { headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.get(`/api/search?q=${query}`, { headers: {'Authorization': `Bearer ${token}`}});
 
     return response.data;
 
