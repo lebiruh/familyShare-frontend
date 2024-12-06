@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// const baseURL = import.meta.env.VITE_BASE_URL;
+const baseURL = import.meta.env.VITE_BASE_URL;
 
 export const getComments = async (postId) => {
 
@@ -9,13 +9,9 @@ export const getComments = async (postId) => {
   const token = userData?.token
 
   try {
-    const response = await axios.get(`/api/comments/${postId}`, { headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.get(`${baseURL}/api/comments/${postId}`, { headers: {'Authorization': `Bearer ${token}`}});
 
     const posts = response.data;
-
-    console.log("Comment Response data: ", response);
-
-    console.log("Get comment: ", posts);
 
     return posts;
 
@@ -35,7 +31,7 @@ export const addComment = async (newComment) => {
 
 
   try {
-    const response = await axios.post(`/api/comments/${postId}`, newComment, { headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.post(`${baseURL}/api/comments/${postId}`, newComment, { headers: {'Authorization': `Bearer ${token}`}});
 
     const posts = response.data;
 

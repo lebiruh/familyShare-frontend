@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// const baseURL = import.meta.env.VITE_BASE_URL;
+const baseURL = import.meta.env.VITE_BASE_URL;
 
 export const addPost = async (postData) => {
 
@@ -11,7 +11,7 @@ export const addPost = async (postData) => {
 
   try {
 
-    const response = await axios.post(`/api/post/${postData.familyId}`, postData, { headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.post(`${baseURL}/api/post/${postData.familyId}`, postData, { headers: {'Authorization': `Bearer ${token}`}});
 
     const posts = response.data;
 
@@ -31,7 +31,7 @@ export const getPosts = async (familyId) => {
   const token = userData?.token
 
   try {
-    const response = await axios.get(`/api/posts/${familyId}`, { headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.get(`${baseURL}/api/posts/${familyId}`, { headers: {'Authorization': `Bearer ${token}`}});
 
     const posts = response.data;
 
@@ -50,7 +50,7 @@ export const deletePost = async (postId) => {
   const token = userData?.token
 
   try {
-    const response = await axios.delete(`/api/deletePost/${postId}`, { headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.delete(`${baseURL}/api/deletePost/${postId}`, { headers: {'Authorization': `Bearer ${token}`}});
 
     const posts = response.data;
 

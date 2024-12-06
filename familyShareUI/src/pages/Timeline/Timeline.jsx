@@ -38,7 +38,7 @@ const Timeline = () => {
   const [file, setFile] = useState(null)
 
   
-  
+  const baseURL = import.meta.env.VITE_BASE_URL;
   
   
   // Access the client
@@ -55,7 +55,7 @@ const Timeline = () => {
     try {
       const formData = new FormData();
       formData.append("image", file);
-      const res = await axios.post(`/api/upload`, formData);
+      const res = await axios.post(`${baseURL}/api/upload`, formData);
       return res.data;
     } catch (err) {
       console.log(err);

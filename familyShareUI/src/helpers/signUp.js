@@ -1,13 +1,13 @@
 import axios from "axios"
 // import {axiosInstance} from "../Api/axios"
 
-// const baseURL = import.meta.env.VITE_BASE_URL;
+const baseURL = import.meta.env.VITE_BASE_URL;
 
 export const signUp = async (signUpData) => {
 
   try {
 
-    const response = await axios.post(`/api/confirm/email`, signUpData);
+    const response = await axios.post(`${baseURL}/api/confirm/email`, signUpData);
 
     return response.data;
 
@@ -24,7 +24,7 @@ export const register = async (registrationData) => {
 
   try {
 
-    const response = await axios.post(`/api/auth/register`, registrationData);
+    const response = await axios.post(`${baseURL}/api/auth/register`, registrationData);
 
     return response.data;
 

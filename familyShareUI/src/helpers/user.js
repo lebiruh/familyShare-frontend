@@ -1,5 +1,7 @@
 import axios from "axios"
 
+const baseURL = import.meta.env.VITE_BASE_URL;
+
 export const getUserByEmail = async (userEmail) => {
 
   const userData = JSON.parse(localStorage.getItem('familyShareAuthData'))
@@ -7,7 +9,7 @@ export const getUserByEmail = async (userEmail) => {
   const token = userData?.token
 
   try {
-    const response = await axios.get(`/api/users/find/${userEmail}`, { headers: {'Authorization': `Bearer ${token}`}})
+    const response = await axios.get(`${baseURL}/api/users/find/${userEmail}`, { headers: {'Authorization': `Bearer ${token}`}})
 
     return response;
 
@@ -25,7 +27,7 @@ export const getUserById = async (userId) => {
   const token = userData?.token
 
   try {
-    const response = await axios.get(`/api/user/findById/${userId}`, { headers: {'Authorization': `Bearer ${token}`}})
+    const response = await axios.get(`${baseURL}/api/user/findById/${userId}`, { headers: {'Authorization': `Bearer ${token}`}})
 
     return response.data;
 
