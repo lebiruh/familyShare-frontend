@@ -58,8 +58,12 @@ export const addFamilyMember = async (familyId, userId) => {
 
 export const createFamily = async (familyName, userId) => {
 
+  const userData = JSON.parse(localStorage.getItem('familyShareAuthData'))
+
+  const token = userData?.token
+
   try {
-    const response = await axios.post(`${baseURL}/api/createFamily/${userId}`, {familyName}, {  withCredentials: true});
+    const response = await axios.post(`${baseURL}/api/createFamily/${userId}`, {familyName}, {  headers: {'Authorization': `Bearer ${token}`}});
 
     return response;
 

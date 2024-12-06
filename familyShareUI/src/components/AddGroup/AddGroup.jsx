@@ -15,13 +15,8 @@ const AddGroup = ({setIsAddGroupOpen, userId}) => {
 
   const createFamilyMutation = useMutation({
       mutationFn: () => createFamily(groupName, userId),
-      onSuccess: (response) => {
-        if (response.response.status === 409){
-          alert("User already exists!")
-        } else {
-          alert("User successfully added!")
+      onSuccess: () => {
           queryClient.invalidateQueries({queryKey: ["families", userId]})
-        }
       },
       onError: (error) => {
 
