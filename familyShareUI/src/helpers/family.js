@@ -10,7 +10,7 @@ export const getFamilies = async (userId) => {
   const token = userData?.token
 
   try {
-    const response = await axios.get(`/api/getFamily/${userId}`, {  headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.get(`${baseURL}/api/getFamily/${userId}`, {  headers: {'Authorization': `Bearer ${token}`}});
 
     return response;
 
@@ -28,7 +28,7 @@ export const getFamilyMembers = async (familyId) => {
   const token = userData?.token
 
   try {
-    const response = await axios.get(`/api/getFamilyMembers/${familyId}`, {  headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.get(`${baseURL}/api/getFamilyMembers/${familyId}`, {  headers: {'Authorization': `Bearer ${token}`}});
 
     return response;
 
@@ -46,7 +46,7 @@ export const addFamilyMember = async (familyId, userId) => {
   const token = userData?.token
 
   try {
-    const response = await axios.post(`/api/addFamilyMember/${familyId}`, {userId}, {  headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.post(`${baseURL}/api/addFamilyMember/${familyId}`, {userId}, {  headers: {'Authorization': `Bearer ${token}`}});
 
     return response;
 
@@ -63,7 +63,7 @@ export const createFamily = async (familyName, userId) => {
   const token = userData?.token
 
   try {
-    const response = await axios.post(`/api/createFamily/${userId}`, {familyName}, {  headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.post(`${baseURL}/api/createFamily/${userId}`, {familyName}, {  headers: {'Authorization': `Bearer ${token}`}});
 
     return response;
 

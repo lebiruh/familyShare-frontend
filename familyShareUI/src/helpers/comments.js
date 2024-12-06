@@ -9,7 +9,7 @@ export const getComments = async (postId) => {
   const token = userData?.token
 
   try {
-    const response = await axios.get(`/api/comments/${postId}`, { headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.get(`${baseURL}/api/comments/${postId}`, { headers: {'Authorization': `Bearer ${token}`}});
 
     const posts = response.data;
 
@@ -31,7 +31,7 @@ export const addComment = async (newComment) => {
 
 
   try {
-    const response = await axios.post(`/api/comments/${postId}`, newComment, { headers: {'Authorization': `Bearer ${token}`}});
+    const response = await axios.post(`${baseURL}/api/comments/${postId}`, newComment, { headers: {'Authorization': `Bearer ${token}`}});
 
     const posts = response.data;
 

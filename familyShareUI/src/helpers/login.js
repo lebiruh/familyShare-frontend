@@ -6,7 +6,7 @@ export const login = async (loginData) => {
 
   try {
 
-    const response = await axios.post(`/api/auth/login`, loginData);
+    const response = await axios.post(`${baseURL}/api/auth/login`, loginData);
 
     return response.data;
 
