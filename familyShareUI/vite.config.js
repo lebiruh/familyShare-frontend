@@ -11,8 +11,8 @@ export default defineConfig({
     proxy: {
       "/api": {
         // target: "http://ec2-18-217-122-189.us-east-2.compute.amazonaws.com:5000",
-        // target: "http://localhost:5000",
-        target: "https://ec2-18-117-169-81.us-east-2.compute.amazonaws.com",
+        target: "http://localhost:5000",
+        // target: "https://ec2-18-117-169-81.us-east-2.compute.amazonaws.com",
         changeOrigin: true
       }
     },
