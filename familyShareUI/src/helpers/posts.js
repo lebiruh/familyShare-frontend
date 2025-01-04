@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = "myfamilyshares-1256379681.us-east-2.elb.amazonaws.com"
+const baseURL = import.meta.env.VITE_BASE_URL
 
 export const addPost = async (postData) => {
 
